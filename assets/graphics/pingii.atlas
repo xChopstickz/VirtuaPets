@@ -1,0 +1,236 @@
+
+pingii.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+pingii-crack
+  rotate: false
+  xy: 448, 3
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 5
+pingii-crack
+  rotate: false
+  xy: 894, 4
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 2
+pingii-jump
+  rotate: false
+  xy: 1340, 825
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 3
+pingii-jump
+  rotate: false
+  xy: 1340, 415
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 0
+pingii-idle
+  rotate: false
+  xy: 1340, 415
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 0
+pingii-left
+  rotate: false
+  xy: 2, 824
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 2
+pingii-left
+  rotate: false
+  xy: 2, 413
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 4
+pingii-left
+  rotate: false
+  xy: 894, 1235
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 1
+pingii-left
+  rotate: false
+  xy: 448, 413
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 3
+pingii-left
+  rotate: false
+  xy: 1340, 1235
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 0
+pingii-right
+  rotate: false
+  xy: 2, 1235
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 2
+pingii-right
+  rotate: false
+  xy: 448, 1235
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 4
+pingii-right
+  rotate: false
+  xy: 448, 824
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 1
+pingii-right
+  rotate: false
+  xy: 2, 2
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 3
+pingii-right
+  rotate: false
+  xy: 894, 824
+  size: 444, 409
+  orig: 444, 409
+  offset: 0, 0
+  index: 0
+pingii-sleep
+  rotate: false
+  xy: 894, 414
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 0
+pingii-sleep
+  rotate: false
+  xy: 1340, 5
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 2
+
+pingii2.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+pingii-crack
+  rotate: false
+  xy: 2, 1232
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 4
+pingii-crack
+  rotate: false
+  xy: 448, 1232
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 1
+pingii-crack
+  rotate: false
+  xy: 2, 2
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 3
+pingii-crack
+  rotate: false
+  xy: 894, 822
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 0
+pingii-egg
+  rotate: false
+  xy: 448, 3
+  size: 443, 407
+  orig: 443, 407
+  offset: 0, 0
+  index: 4
+pingii-egg
+  rotate: false
+  xy: 894, 413
+  size: 443, 407
+  orig: 443, 407
+  offset: 0, 0
+  index: 1
+pingii-egg
+  rotate: false
+  xy: 1340, 823
+  size: 443, 407
+  orig: 443, 407
+  offset: 0, 0
+  index: 3
+pingii-egg
+  rotate: false
+  xy: 894, 4
+  size: 443, 407
+  orig: 443, 407
+  offset: 0, 0
+  index: 0
+pingii-egg
+  rotate: false
+  xy: 894, 4
+  size: 443, 407
+  orig: 443, 407
+  offset: 0, 0
+  index: 2
+pingii-idle
+  rotate: false
+  xy: 2, 412
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 1
+pingii-jump
+  rotate: false
+  xy: 2, 822
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 2
+pingii-jump
+  rotate: false
+  xy: 894, 1232
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 4
+pingii-jump
+  rotate: false
+  xy: 448, 412
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 1
+pingii-sleep
+  rotate: false
+  xy: 448, 822
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 1
+pingii-sleep
+  rotate: false
+  xy: 1340, 1232
+  size: 444, 408
+  orig: 444, 408
+  offset: 0, 0
+  index: 3
