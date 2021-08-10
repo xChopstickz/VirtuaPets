@@ -6,54 +6,72 @@ import com.badlogic.gdx.graphics.g2d.Animation
 import com.badlogic.gdx.graphics.g2d.TextureRegion
 import com.badlogic.gdx.utils.GdxRuntimeException
 import com.badlogic.gdx.utils.Pool
-import com.github.xchopstickz.VirtuaPets.assets.TextureAtlasAssets
 import ktx.ashley.get
 import ktx.ashley.mapperFor
 import ktx.collections.gdxArrayOf
 
-enum class AnimationType(
-    val atlasAssets: TextureAtlasAssets,
-    val altasKey: String,
-    val speed: Float = 1f,
-    val playMode: Animation.PlayMode = Animation.PlayMode.LOOP
-) {
-    NONE(TextureAtlasAssets.PINGII,"error"),
-    PINGII_EGG(TextureAtlasAssets.PINGII,"pingii-egg",1.95f),
-    PINGII_CRACK(TextureAtlasAssets.PINGII,"pingii-crack",7.5f),
-    PINGII_IDLE(TextureAtlasAssets.PINGII,"pingii-idle",7.5f),
-    PINGII_SLEEP(TextureAtlasAssets.PINGII,"pingii-sleep"),
-    PINGII_JUMP(TextureAtlasAssets.PINGII,"pingii-jump",2.75f)
-}
-
 class AnimationComponent: Component,Pool.Poolable {
-    var dirty = true
-        private set
-    var stateTime = 0f
-    var type = AnimationType.NONE
+    var atlasFilePath = ""
         set(value) {
             dirty = value != field
             field = value
+        }
+
+    var regionKey = ""
+    set(value) {
+        dirty = value != field
+        field = value
     }
-     var gdxAnimation: Animation<TextureRegion> = EMPTY_ANIMATION
+
+    var stateKey = ""
+    set(value) {
+        dirty = value != field
+        field = value
+    }
+
+    var playMode = Animation.PlayMode.LOOP
+    var stateTime = 0f
+    var animationSpeed = 1f
+    internal var gdxAnimation: Animation<TextureRegion> = EMPTY_ANIMATION
     set(value) {
         dirty = false
         stateTime = 0f
         field = value
     }
 
-    fun dirty() = dirty
+    internal var dirty = true
+        private set
 
     override fun reset() {
-        dirty = true
+        atlasFilePath = ""
+        regionKey = ""
+        stateKey = ""
+        playMode = Animation.PlayMode.LOOP
+        animationSpeed = 1f
         stateTime = 0f
-        type = AnimationType.NONE
+        dirty = true
     }
+
+    fun isAnimationFinished() = gdxAnimation.isAnimationFinished(stateTime)
+
     companion object {
         val mapper = mapperFor<AnimationComponent>()
         val EMPTY_ANIMATION = Animation<TextureRegion>(0f, gdxArrayOf())
     }
 }
 
-val Entity.animation: AnimationComponent
+val Entity.animationCmp: AnimationComponent
     get() = this[AnimationComponent.mapper]
         ?: throw GdxRuntimeException("Transformcomponent for entity '$this' is null")
+
+fun Entity.playAnimation(stateKey: String, animationSpeed: Float = 1f) {
+    this[AnimationComponent.mapper]?.let { animationCmp ->
+        animationCmp.playMode = Animation.PlayMode.NORMAL
+        if (animationCmp.stateKey == stateKey) {
+            animationCmp.stateTime = 0f
+    } else {
+        animationCmp.stateKey = stateKey
+    }
+        animationCmp.animationSpeed = animationSpeed
+    }
+}

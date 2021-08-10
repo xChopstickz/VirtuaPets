@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.g2d.Batch
 import com.badlogic.gdx.utils.viewport.Viewport
 import com.github.xchopstickz.VirtuaPets.ashley.component.RenderComponent
 import com.github.xchopstickz.VirtuaPets.ashley.component.TransformComponent
-import com.github.xchopstickz.VirtuaPets.ashley.component.render
+import com.github.xchopstickz.VirtuaPets.ashley.component.renderCmp
 import com.github.xchopstickz.VirtuaPets.ashley.component.transform
 import ktx.ashley.allOf
 import ktx.ashley.get
@@ -31,7 +31,7 @@ class RenderSystem(
     }
     override fun processEntity(entity: Entity, deltaTime: Float) {
         val transform = entity.transform
-        val render = entity.render
+        val render = entity.renderCmp
 
         if(render.sprite.texture == null) {
             LOG.error { "Entity '$entity' does not have a texture" }
